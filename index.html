@@ -1,11 +1,195 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RASTREADOR DE OFERTAS :: O seu canal para encontrar as melhores ofertas e descontos da Internet</title>
+    
+    <!-- Metadados básicos -->
+    <title>RASTREADOR de OFERTAS - As melhores ofertas e descontos da Internet estão aqui!</title>
+    <meta name="description" content="Bem-vindo à nossa página oficial! Conecte-se conosco nas redes sociais e descubra nossos serviços inovadores. Transformamos ideias em realidade.">
+    <meta name="keywords" content="empresa, negócios, serviços, inovação, redes sociais, contato">
+    <meta name="author" content="RASTREADOR de OFERTAS">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="pt-BR">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.rastreadordeofertas.com.br/">
+    <meta property="og:title" content="RASTREADOR de OFERTAS - As melhores ofertas e descontos da Internet estão aqui!">
+    <meta property="og:description" content="Bem-vindo à nossa página oficial! Conecte-se conosco nas redes sociais e descubra nossos serviços inovadores. Transformamos ideias em realidade.">
+    <meta property="og:image" content="https://www.rastreadordeofertas.com.br/logo-rastreador.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Logo da RASTREADOR de OFERTAS">
+    <meta property="og:site_name" content="RASTREADOR de OFERTAS">
+    <meta property="og:locale" content="pt_BR">
+    
+    <!-- WhatsApp -->
+    <meta property="og:image:type" content="image/jpeg">
+    
+    <!-- Metadados adicionais -->
+    <meta name="theme-color" content="#24354e">
+    <meta name="msapplication-TileColor" content="#24354e">
+    <meta name="msapplication-TileImage" content="/mstile-144x144.png">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://www.rastreadordeofertas.com.br/">
+    
+    <!-- Favicon completo -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    
+    <!-- Preconnect para performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #24354e 0%, #451bff 100%);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: #333;
+        }
+
+        .container {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            width: 90%;
+        }
+
+        .logo {
+            width: 90%;
+            max-width: 400px;
+            height: auto;
+            margin-bottom: 30px;
+            border-radius: 10px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .logo-placeholder {
+            width: 90%;
+            max-width: 400px;
+            height: 200px;
+            background: linear-gradient(45deg, #f0f0f0, #e0e0e0);
+            border: 2px dashed #ccc;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 30px;
+            border-radius: 10px;
+            font-size: 18px;
+            color: #666;
+        }
+
+        h1 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+            font-size: 2.5em;
+            font-weight: 300;
+        }
+
+        .subtitle {
+            color: #7f8c8d;
+            margin-bottom: 30px;
+            font-size: 1.2em;
+        }
+
+        .social-info {
+            background: #f8f9fa;
+            border-radius: 15px;
+            padding: 25px;
+            margin: 20px 0;
+        }
+
+        .social-info h2 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+            font-size: 1.5em;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+
+        .social-link {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 15px;
+            background: white;
+            border-radius: 25px;
+            text-decoration: none;
+            color: #2c3e50;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .social-link:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .contact-info {
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid #ecf0f1;
+        }
+
+        .contact-info p {
+            margin: 5px 0;
+            color: #5d6d7e;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+                width: 95%;
+            }
+            
+            h1 {
+                font-size: 2em;
+            }
+            
+            .social-links {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .social-link {
+                width: 200px;
+                justify-content: center;
+            }
+        }
+    </style>
 </head>
 <body>
-    <p align="center"><img src="rastreador.png"></p>
+    <div class="container">
+        <div class="logo-placeholder">
+            <img src="rastreador.png" alt="Rastreador de Ofertas" class="logo">
+        </div>
+        
+        <h1>Sua Empresa</h1>
+        <p class="subtitle">Em breve novidades!</p>
+
+    </div>
 </body>
 </html>
