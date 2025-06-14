@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nossos Links - Rastreador de Ofertas</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #5b36e0 0%, #24354e 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .title {
+            margin: 40px 0 20px;
+        }
+
+        .container {
+            background: #fff;
+            border-radius: 20px;
+            padding: 40px 30px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 100%;
+            text-align: center;
+            backdrop-filter: blur(10px);
+        }
+
+        .profile {
+            margin-bottom: 30px;
+        }
+
+        .profile-img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            background: linear-gradient(45deg, #5b36e0 0%, #24354e 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 40px;
+            color: white;
+            font-weight: bold;
+        }
+
+        .profile h1 {
+            color: #333;
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .profile p {
+            color: #666;
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+
+        .links {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .link-item {
+            display: block;
+            padding: 15px 20px;
+            background: linear-gradient(45deg, #5b36e0 0%, #24354e 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 500;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .link-item:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4);
+        }
+
+        .link-item:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.5s;
+        }
+
+        .link-item:hover:before {
+            left: 100%;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .social-link {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            color: white;
+            font-size: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .social-link.instagram {
+            background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+        }
+
+        .social-link.twitter {
+            background: #000;
+            font-weight: bold;
+        }
+
+        .social-link.facebook {
+            background: #3B5998;
+        }
+        
+        .social-link.linkedin {
+            background: #0077b5;
+        }
+
+        .social-link.youtube {
+            background: #ff0000;
+        }
+
+        .social-link.github {
+            background: #333;
+        }
+
+        .social-link:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 30px 20px;
+                margin: 10px;
+            }
+            
+            .profile h1 {
+                font-size: 20px;
+            }
+            
+            .link-item {
+                padding: 12px 15px;
+                font-size: 14px;
+            }
+        }
+
+        /* Animação de entrada */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .container {
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        .link-item {
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        .link-item:nth-child(1) { animation-delay: 0.1s; }
+        .link-item:nth-child(2) { animation-delay: 0.2s; }
+        .link-item:nth-child(3) { animation-delay: 0.3s; }
+        .link-item:nth-child(4) { animation-delay: 0.4s; }
+        .link-item:nth-child(5) { animation-delay: 0.5s; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="profile">
+            <div>
+                <img src="rastreador.png" alt="Foto de perfil" style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+        </div>
+
+        <div class="links">
+            <a href="https://www.rastreadordeofertas.com.br" class="link-item" target="_blank">
+                🌐 Nosso Site
+            </a>
+            
+            <a href="mailto:gestor@rastreadordeofertas.com.br" class="link-item">
+                ✉️ Contato
+            </a>
+        </div>
+
+        <div class="title"><h4>Redes Sociais</h4></div>
+
+        <div class="social-links">
+            <a href="https://www.facebook.com/rastreiaofertasbr" class="social-link facebook" target="_blank">
+                <span class="fa fa-facebook"></span>
+            </a>
+
+            <a href="https://instagram.com/rastreiaofertasbr" class="social-link instagram" target="_blank">
+                <span class="fa fa-instagram"></span>
+            </a>
+            
+            <a href="https://x.com/rastreiaofertas" class="social-link twitter" target="_blank">
+                X
+            </a>
+            
+            <a href="https://youtube.com/@rastreiaofertasbr" class="social-link youtube" target="_blank">
+                <span class="fa fa-youtube"></span>
+            </a>
+            
+            <a href="#" onclick="window.alert('Em Breve!')" class="social-link linkedin" target="_blank">
+                <span class="fa fa-linkedin"></span>
+            </a>
+        </div>
+    </div>
+</body>
+</html>
