@@ -3,47 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- Metadados básicos -->
-    <title>RASTREADOR de OFERTAS - As melhores ofertas e descontos da Internet estão aqui!</title>
-    <meta name="description" content="Bem-vindo à nossa página oficial! Conecte-se conosco nas redes sociais e descubra nossos serviços inovadores. Transformamos ideias em realidade.">
-    <meta name="keywords" content="empresa, negócios, serviços, inovação, redes sociais, contato">
-    <meta name="author" content="RASTREADOR de OFERTAS">
-    <meta name="robots" content="index, follow">
-    <meta name="language" content="pt-BR">
-    
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.rastreadordeofertas.com.br/">
-    <meta property="og:title" content="RASTREADOR de OFERTAS - As melhores ofertas e descontos da Internet estão aqui!">
-    <meta property="og:description" content="Bem-vindo à nossa página oficial! Conecte-se conosco nas redes sociais e descubra sempre as melhores ofertas.">
-    <meta property="og:image" content="https://www.rastreadordeofertas.com.br/logo-rastreador.png">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
-    <meta property="og:image:alt" content="Logo da RASTREADOR de OFERTAS">
-    <meta property="og:site_name" content="RASTREADOR de OFERTAS">
-    <meta property="og:locale" content="pt_BR">
-    
-    <!-- WhatsApp -->
-    <meta property="og:image:type" content="image/jpeg">
-    
-    <!-- Metadados adicionais -->
-    <meta name="theme-color" content="#24354e">
-    <meta name="msapplication-TileColor" content="#24354e">
-    <meta name="msapplication-TileImage" content="/mstile-144x144.png">
-    
-    <!-- Canonical URL -->
-    <link rel="canonical" href="https://www.rastreadordeofertas.com.br/">
-    
-    <!-- Favicon completo -->
-    <link rel="icon" type="image/x-icon" href="/favicon.ico">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    
-    <!-- Preconnect para performance -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    
+    <title>Acesso ao Grupo - Rastreador de Ofertas</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
         * {
             margin: 0;
@@ -53,128 +14,248 @@
 
         body {
             font-family: 'Arial', sans-serif;
-            background: linear-gradient(135deg, #24354e 0%, #451bff 100%);
+            background: linear-gradient(135deg, #5b36e0 0%, #24354e 100%);
             min-height: 100vh;
             display: flex;
-            flex-direction: column;
             justify-content: center;
             align-items: center;
-            color: #333;
+            padding: 20px;
+        }
+
+        .title {
+            margin: 40px 0 20px;
         }
 
         .container {
-            text-align: center;
-            background: rgba(255, 255, 255, 0.95);
+            background: #fff;
             border-radius: 20px;
-            padding: 40px;
+            padding: 40px 30px;
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-            max-width: 600px;
-            width: 90%;
-        }
-
-        .logo {
-            width: 90%;
             max-width: 400px;
-            height: auto;
-            margin-bottom: 30px;
-            border-radius: 10px;
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            text-align: center;
+            backdrop-filter: blur(10px);
         }
 
+        .profile {
+            margin-bottom: 30px;
+        }
 
-        h1 {
-            color: #2c3e50;
+        .profile-img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            background: linear-gradient(45deg, #5b36e0 0%, #24354e 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 40px;
+            color: white;
+            font-weight: bold;
+        }
+
+        .profile h1 {
+            color: #333;
+            font-size: 24px;
             margin-bottom: 10px;
-            font-size: 2em;
-            font-weight: 300;
         }
 
-        .subtitle {
-            color: #7f8c8d;
-            margin-bottom: 30px;
-            font-size: 1.2em;
-        }
-
-        .social-info {
-            background: #f8f9fa;
-            border-radius: 15px;
-            padding: 25px;
-            margin: 20px 0;
-        }
-
-        .social-info h2 {
-            color: #2c3e50;
+        .profile p {
+            color: #666;
+            font-size: 16px;
             margin-bottom: 20px;
-            font-size: 1.5em;
+        }
+
+        .links {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .link-item {
+            display: block;
+            padding: 15px 20px;
+            background: linear-gradient(45deg, #5b36e0 0%, #24354e 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 500;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .link-item:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4);
+        }
+
+        .link-item:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.5s;
+        }
+
+        .link-item:hover:before {
+            left: 100%;
         }
 
         .social-links {
             display: flex;
             justify-content: center;
-            gap: 20px;
-            flex-wrap: wrap;
-            margin-bottom: 20px;
+            gap: 15px;
         }
 
         .social-link {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
             display: flex;
             align-items: center;
-            gap: 8px;
-            padding: 10px 15px;
-            background: white;
-            border-radius: 25px;
+            justify-content: center;
             text-decoration: none;
-            color: #2c3e50;
+            color: white;
+            font-size: 20px;
             transition: all 0.3s ease;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .social-link.instagram {
+            background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+        }
+
+        .social-link.twitter {
+            background: #000;
+            font-weight: bold;
+        }
+
+        .social-link.facebook {
+            background: #3B5998;
+        }
+        
+        .social-link.linkedin {
+            background: #0077b5;
+        }
+
+        .social-link.youtube {
+            background: #ff0000;
+        }
+
+        .social-link.github {
+            background: #333;
+        }
+
+        .zap {
+            background: #25D366 !important;
+        }
+
+        .teleg {
+            background: #24A1DE !important;
         }
 
         .social-link:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
         }
 
-        .contact-info {
-            margin-top: 20px;
-            padding-top: 20px;
-            border-top: 1px solid #ecf0f1;
-        }
-
-        .contact-info p {
-            margin: 5px 0;
-            color: #5d6d7e;
-        }
-
-        @media (max-width: 768px) {
+        @media (max-width: 480px) {
             .container {
-                padding: 20px;
-                width: 95%;
+                padding: 30px 20px;
+                margin: 10px;
             }
             
-            h1 {
-                font-size: 2em;
+            .profile h1 {
+                font-size: 20px;
             }
             
-            .social-links {
-                flex-direction: column;
-                align-items: center;
-            }
-            
-            .social-link {
-                width: 200px;
-                justify-content: center;
+            .link-item {
+                padding: 12px 15px;
+                font-size: 14px;
             }
         }
+
+        /* Animação de entrada */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .container {
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        .link-item {
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        .link-item:nth-child(1) { animation-delay: 0.1s; }
+        .link-item:nth-child(2) { animation-delay: 0.2s; }
+        .link-item:nth-child(3) { animation-delay: 0.3s; }
+        .link-item:nth-child(4) { animation-delay: 0.4s; }
+        .link-item:nth-child(5) { animation-delay: 0.5s; }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="logo-placeholder">
-            <img src="rastreador.png" alt="Rastreador de Ofertas" class="logo">
+        <div class="profile">
+            <div>
+                <img src="rastreador.png" alt="Foto de perfil" style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
         </div>
-        
-        <h1>Em breve novidades!</h1>
 
+        <div class="links">
+            <!--<a href="https://www.rastreadordeofertas.com.br" class="link-item" target="_blank">
+                🌐 Nosso Site
+            </a>-->
+
+            <a href="https://chat.whatsapp.com/JcNDXCLVnhGFYRUIoLALwb" class="link-item zap">
+                <i class="fa fa-whatsapp"></i> Entre em Nosso Grupo do WhatsApp
+            </a>
+
+            <a href="https://t.me/+foP7-6T4rLZkYWNh" class="link-item teleg">
+                <i class="fa fa-telegram"></i> Entre em Nosso Grupo do Telegram
+            </a>
+            
+            <!--<a href="mailto:gestor@rastreadordeofertas.com.br" class="link-item">
+                ✉️ Contato
+            </a>-->
+        </div>
+
+        <div class="title"><h4>Redes Sociais</h4></div>
+
+        <div class="social-links">
+            <a href="https://www.facebook.com/rastreiaofertasbr" class="social-link facebook" target="_blank">
+                <span class="fa fa-facebook"></span>
+            </a>
+
+            <a href="https://instagram.com/rastreiaofertasbr" class="social-link instagram" target="_blank">
+                <span class="fa fa-instagram"></span>
+            </a>
+            
+            <a href="https://x.com/rastreiaofertas" class="social-link twitter" target="_blank">
+                X
+            </a>
+            
+            <a href="https://youtube.com/@rastreadorofertastv" class="social-link youtube" target="_blank">
+                <span class="fa fa-youtube"></span>
+            </a>
+            
+            <a href="#" onclick="window.alert('Em Breve!')" class="social-link linkedin" target="_blank">
+                <span class="fa fa-linkedin"></span>
+            </a>
+        </div>
     </div>
 </body>
 </html>
