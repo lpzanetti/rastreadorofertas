@@ -108,6 +108,26 @@
       max-width: 280px;
     }
 
+    .header-aviso {
+      display: inline-flex;
+      align-items: center;
+      color: #000;
+      gap: 8px;
+      width: 100%;
+      max-width: 360px;
+      border-radius: 10px;
+      font-size: 12px;
+      font-weight: 500;
+      line-height: 1.35;
+      text-align: left;
+    }
+
+    .header-aviso svg {
+      width: 18px;
+      height: 18px;
+      flex-shrink: 0;
+    }
+
     .products-wrap {
       flex: 1;
       min-height: 0;
@@ -413,6 +433,13 @@
         Esquenta Black Friday
       </div>
       <p class="header-subtitle">Ofertas conferidas. Sem preço maquiado.</p>
+      <div class="header-aviso" role="status">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path fill="#f5c518" stroke="#111" stroke-width="1.2" stroke-linejoin="round" d="M12 3.2 22 20.5H2L12 3.2z" />
+          <path fill="#111" d="M11.15 9.2h1.7v5.6h-1.7V9.2zm0 7h1.7v1.8h-1.7V16.2z" />
+        </svg>
+        <span>As ofertas podem se encerrar a qualquer momento</span>
+      </div>
     </header>
 
     <div class="products-wrap">
