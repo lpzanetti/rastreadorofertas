@@ -20,6 +20,7 @@
       --card: #ffffff;
       --border: #e4ebf2;
       --muted: #6b7c8f;
+      --category: #6f6f6f;
       --whatsapp: #25d366;
       --shadow: 0 8px 24px rgba(29, 45, 68, 0.08);
       --radius: 16px;
@@ -146,6 +147,35 @@
       gap: 12px;
       scroll-behavior: smooth;
       -webkit-overflow-scrolling: touch;
+    }
+
+    .category-separator {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      min-height: 40px;
+      margin-top: 4px;
+      padding: 10px 16px;
+      background: var(--category);
+      color: #fff;
+      border: none;
+      border-radius: 999px;
+      font-family: inherit;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+      text-align: left;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      flex-shrink: 0;
+    }
+
+    .category-separator:first-child {
+      margin-top: 0;
+    }
+
+    .category-group {
+      display: contents;
     }
 
     .products-container::-webkit-scrollbar {
@@ -409,6 +439,14 @@
         align-content: start;
       }
 
+      .category-separator {
+        grid-column: 1 / -1;
+        margin-top: 8px;
+        font-size: 13px;
+        min-height: 44px;
+        padding: 12px 20px;
+      }
+
       .scroll-indicator-icon {
         display: none;
       }
@@ -480,42 +518,84 @@
   </main>
 
   <script>
+    const categories = [
+      { id: 'p1911', name: 'Ofertas de 19/11' },
+      { id: 'gtavi', name: 'Especial Lançamento GTA VI' }
+    ];
+
     const products = [
-    {
-  title: 'Smart TV LG 55" LED 4K UHD Smart Pro 55AU801C0SA',
-  image: 'https://m.media-amazon.com/images/I/61qaalsmAOL.jpg',
-  url: 'https://link.amazon/B0b0xIN7u'
-},
-{
-  title: 'Sony PlayStation 5 Slim Edição Digital 825GB',
-  image: 'https://m.media-amazon.com/images/I/51xclChPXvL.jpg',
-  url: 'https://link.amazon/B0eYsyR9t'
-},
-{
-  title: 'Grand Theft Auto VI - PlayStation 5 (mídia física)',
-  image: 'https://http2.mlstatic.com/D_NQ_NP_639067-MLA114816196520_082026-O.webp',
-  url: 'https://meli.la/1QB6aae'
-},
-{
-  title: 'Controle sem fio Sony DualSense PS5 Midnight Black',
-  image: 'https://m.media-amazon.com/images/I/517nIWAoJFL.jpg',
-  url: 'https://link.amazon/B02DsJM4p'
-},
+      {
+        title: 'Wap Empr 900k Martelete Sds Plus Com Seletor Reverso 900 W 127V',
+        image: 'https://http2.mlstatic.com/D_Q_NP_2X_664778-MLA120360621897_102026-AB.webp',
+        url: 'https://meli.la/1xBhRtu',
+        category_id: 'p1911'
+      },
+      {
+        title: 'Neurodyn Portátil System 5 Correntes Russa Tens Fes Aussie 127/220v',
+        image: 'https://http2.mlstatic.com/D_Q_NP_2X_635205-MLB120434579189_102026-AB--neurodyn-portatil-system-5-correntes-russa-tens-fes-aussie.webp',
+        url: 'https://meli.la/1HnLVMg',
+        category_id: 'p1911'
+      },
+      {
+        title: 'Cacheador Philco Bivolt 32mm Íon Tourmaline Advance PEC11',
+        image: 'https://down-br.img.susercontent.com/file/sg-11134201-825a1-mvmc7pxzooaq04',
+        url: 'https://s.shopee.com.br/906tUVmDYY',
+        category_id: 'p1911'
+      },
+      {
+        title: 'Bico Para Pneus',
+        image: 'https://down-br.img.susercontent.com/file/br-11134207-820m4-muvf28zk70ub17',
+        url: 'https://s.shopee.com.br/9AQJgolaDb',
+        category_id: 'p1911'
+      },
+      {
+        title: 'Baqueta Para Bateria 7A Nirvana Eco Bio Liverpool',
+        image: 'https://m.media-amazon.com/images/I/613OqWAfW3L.jpg',
+        url: 'https://link.amazon/B0aziAemu',
+        category_id: 'p1911'
+      },
+      {
+        title: 'Vela Espiral Colorida Aniversário 4 Unidades Decoração Festas Bolo',
+        image: 'https://m.media-amazon.com/images/I/519lLRpGFjL.jpg',
+        url: 'https://link.amazon/B04gBFRjW',
+        category_id: 'p1911'
+      },
+      {
+        title: 'Smart TV LG 55" LED 4K UHD Smart Pro 55AU801C0SA',
+        image: 'https://m.media-amazon.com/images/I/61qaalsmAOL.jpg',
+        url: 'https://link.amazon/B0b0xIN7u',
+        category_id: 'gtavi'
+      },
+      {
+        title: 'Sony PlayStation 5 Slim Edição Digital 825GB',
+        image: 'https://m.media-amazon.com/images/I/51xclChPXvL.jpg',
+        url: 'https://link.amazon/B0f2m9AQc',
+        category_id: 'gtavi'
+      },
+      {
+        title: 'Grand Theft Auto VI - PlayStation 5 (mídia física)',
+        image: 'https://http2.mlstatic.com/D_NQ_NP_639067-MLA114816196520_082026-O.webp',
+        url: 'https://link.amazon/B0a69SEuM',
+        category_id: 'gtavi'
+      },
+      {
+        title: 'Controle sem fio Sony DualSense PS5 Midnight Black',
+        image: 'https://m.media-amazon.com/images/I/517nIWAoJFL.jpg',
+        url: 'https://link.amazon/B02DsJM4p',
+        category_id: 'gtavi'
+      }
     ];
 
     const productList = document.getElementById('productList');
     const scrollIndicator = document.getElementById('scrollIndicator');
 
-    function renderProducts(items) {
-      if (!items.length) {
-        productList.innerHTML = '<p class="empty-state">Nenhum produto no momento.</p>';
-        return;
-      }
+    function renderProductCard(product) {
+      const productUrl = product.url || product.link || '#';
 
-      productList.innerHTML = items.map((product) => `
+      return `
         <a
           class="product-card"
-          href="${escapeAttr(product.url)}"
+          href="${escapeAttr(productUrl)}"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -537,6 +617,37 @@
             </span>
           </div>
         </a>
+      `;
+    }
+
+    function renderProducts(items, categoryList) {
+      if (!items.length) {
+        productList.innerHTML = '<p class="empty-state">Nenhum produto no momento.</p>';
+        return;
+      }
+
+      const productsByCategory = items.reduce((acc, product) => {
+        const key = product.category_id || 'outros';
+        if (!acc[key]) acc[key] = [];
+        acc[key].push(product);
+        return acc;
+      }, {});
+
+      const knownIds = new Set(categoryList.map((category) => category.id));
+      const orderedCategories = [
+        ...categoryList.filter((category) => productsByCategory[category.id]?.length),
+        ...Object.keys(productsByCategory)
+          .filter((id) => !knownIds.has(id))
+          .map((id) => ({ id, name: id === 'outros' ? 'Outros' : id }))
+      ];
+
+      productList.innerHTML = orderedCategories.map((category) => `
+        <div class="category-group" data-category="${escapeAttr(category.id)}">
+          <div class="category-separator" role="heading" aria-level="2">
+            ${escapeHtml(category.name)}
+          </div>
+          ${productsByCategory[category.id].map(renderProductCard).join('')}
+        </div>
       `).join('');
     }
 
@@ -594,7 +705,7 @@
     productList.addEventListener('scroll', updateScrollIndicator, { passive: true });
     window.addEventListener('resize', updateScrollIndicator);
 
-    renderProducts(products);
+    renderProducts(products, categories);
     requestAnimationFrame(updateScrollIndicator);
   </script>
 </body>
