@@ -517,11 +517,41 @@
     </footer>
   </main>
 
-  <!-- data.js resolve a partir da página (não do <base>), funciona em file:// sem servidor -->
+  <!-- data.js: em produção usa <base>; em local/file resolve a pasta da página (evita /bio → /data.js) -->
   <script>
-    document.write(
-      '<script src="' + new URL('data.js', window.location.href).href + '"><\/script>'
-    );
+    (function () {
+      function resolveDataUrl() {
+        const host = window.location.hostname;
+        const isLocal =
+          host === '127.0.0.1' ||
+          host === 'localhost' ||
+          window.location.protocol === 'file:';
+
+        if (!isLocal) {
+          const baseHref = document.querySelector('base')?.href;
+          if (baseHref) return new URL('data.js', baseHref).href;
+        }
+
+        const url = new URL(window.location.href);
+        let path = url.pathname;
+        const last = path.split('/').pop() || '';
+
+        if (path.endsWith('/')) {
+          // já é pasta
+        } else if (/\.[a-z0-9]+$/i.test(last)) {
+          path = path.replace(/\/[^/]+$/, '/');
+        } else {
+          path += '/';
+        }
+
+        url.pathname = path + 'data.js';
+        url.search = '';
+        url.hash = '';
+        return url.href;
+      }
+
+      document.write('<script src="' + resolveDataUrl() + '"><\/script>');
+    })();
   </script>
   <script>
     // Categorias + produtos locais: data.js | Produtos remotos: GCS
