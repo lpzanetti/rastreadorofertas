@@ -524,8 +524,9 @@
     );
   </script>
   <script>
-    // Opcional: URL externa de JSON (CDN/API). Vazio = usa data.js local (offline).
-    const DATA_URL = '';
+    // Categorias: data.js | Produtos: data.json local + feed remoto
+    const LOCAL_PRODUCTS_URL = new URL('data.json', window.location.href).href;
+    const REMOTE_PRODUCTS_URL = 'https://storage.googleapis.com/rastreador-ofertas-lp/produtos/atual.json';
 
     const productList = document.getElementById('productList');
     const scrollIndicator = document.getElementById('scrollIndicator');
@@ -646,26 +647,68 @@
     productList.addEventListener('scroll', updateScrollIndicator, { passive: true });
     window.addEventListener('resize', updateScrollIndicator);
 
+    function extractProducts(payload) {
+      if (Array.isArray(payload)) return payload;
+      if (payload && typeof payload === 'object') {
+        if (Array.isArray(payload.products)) return payload.products;
+        if (Array.isArray(payload.items)) return payload.items;
+      }
+      return [];
+    }
+
+    async function fetchProducts(url, timeoutMs = 8000) {
+      const controller = new AbortController();
+      const timer = setTimeout(() => controller.abort(), timeoutMs);
+
+      try {
+        const response = await fetch(url, {
+          cache: 'no-store',
+          signal: controller.signal
+        });
+        if (!response.ok) {
+          throw new Error(`HTTP ${response.status}`);
+        }
+        return extractProducts(await response.json());
+      } catch (error) {
+        console.warn(`Não foi possível carregar produtos de ${url}`, error);
+        return [];
+      } finally {
+        clearTimeout(timer);
+      }
+    }
+
+    function mergeProducts(...lists) {
+      const merged = [];
+      const seen = new Set();
+
+      lists.flat().forEach((product) => {
+        if (!product || typeof product !== 'object') return;
+
+        const key = String(product.url || product.link || product.title || '').trim().toLowerCase();
+        if (key && seen.has(key)) return;
+        if (key) seen.add(key);
+
+        merged.push(product);
+      });
+
+      return merged;
+    }
+
     async function loadData() {
       productList.innerHTML = '<p class="empty-state">Carregando ofertas...</p>';
 
       try {
-        let data = window.BIO_DATA;
+        const categories = Array.isArray(window.BIO_DATA?.categories)
+          ? window.BIO_DATA.categories
+          : [];
 
-        if (DATA_URL) {
-          const response = await fetch(DATA_URL, { cache: 'no-store' });
-          if (!response.ok) {
-            throw new Error(`Falha ao carregar dados (${response.status})`);
-          }
-          data = await response.json();
-        }
+        const [localProducts, remoteProducts] = await Promise.all([
+          fetchProducts(LOCAL_PRODUCTS_URL),
+          fetchProducts(REMOTE_PRODUCTS_URL)
+        ]);
 
-        if (!data || typeof data !== 'object') {
-          throw new Error('Dados de ofertas não encontrados');
-        }
-
-        const categories = Array.isArray(data.categories) ? data.categories : [];
-        const products = Array.isArray(data.products) ? data.products : [];
+        // Remoto (atual) primeiro; data.json completa o restante
+        const products = mergeProducts(remoteProducts, localProducts);
 
         renderProducts(products, categories);
       } catch (error) {

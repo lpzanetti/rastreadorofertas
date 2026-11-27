@@ -19,24 +19,6 @@ window.BIO_DATA = {
   ],
   "products": [
     {
-      "title": "Interruptor Sensor de Presença para Iluminação ESPI 360 A Branco Intelbras",
-      "image": "https://m.media-amazon.com/images/I/31AmcrnuN0L.jpg",
-      "url": "https://link.amazon/B07kEU2Vq",
-      "category_id": "bf"
-    },
-    {
-      "title": "UGREEN 2 Em 1 HDMI Para USB Placa De Captura De Vídeo E Áudio 4K 30Hz Loop-out 2K 30Hz Gravação Transmissão Ao Vivo Wind",
-      "image": "https://down-br.img.susercontent.com/file/cn-11134207-820l4-mesgqenupczq1c",
-      "url": "https://s.shopee.com.br/8png29F34m",
-      "category_id": "bf"
-    },
-    {
-      "title": "Hoverboard Skate Elétrico 6.5 Polegadas Com Led E Bluetooth",
-      "image": "https://http2.mlstatic.com/D_Q_NP_2X_794796-MLA119397643089_102026-AB.webp",
-      "url": "https://meli.la/1WN5pT2",
-      "category_id": "bf"
-    },
-    {
       "title": "Gin London Dry 750ml Beefeater Sabor Refrescante E Equilibrado, Com Um Toque Frutado E Levemente Cítrico",
       "url": "https://meli.la/1giknz7",
       "image": "https://http2.mlstatic.com/D_Q_NP_2X_871819-MLA113775988658_072026-AB.webp",
