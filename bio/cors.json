@@ -1,0 +1,18 @@
+[
+  {
+    "origin": [
+      "*",
+      "https://www.rastreadordeofertas.com.br",
+      "http://127.0.0.1:8765",
+      "http://localhost:8765"
+    ],
+    "method": ["GET", "HEAD", "OPTIONS"],
+    "responseHeader": [
+      "Content-Type",
+      "Access-Control-Allow-Origin",
+      "Access-Control-Allow-Methods",
+      "Access-Control-Allow-Headers"
+    ],
+    "maxAgeSeconds": 3600
+  }
+]
