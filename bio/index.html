@@ -524,8 +524,7 @@
     );
   </script>
   <script>
-    // Categorias: data.js | Produtos: data.json local + feed remoto (GCS)
-    const LOCAL_PRODUCTS_URL = new URL('data.json', window.location.href).href;
+    // Categorias + produtos locais: data.js | Produtos remotos: GCS
     const REMOTE_PRODUCTS_URL = 'https://storage.googleapis.com/rastreador-ofertas-lp/produtos/atual.json';
 
     const productList = document.getElementById('productList');
@@ -698,16 +697,19 @@
       productList.innerHTML = '<p class="empty-state">Carregando ofertas...</p>';
 
       try {
-        const categories = Array.isArray(window.BIO_DATA?.categories)
+        if (!window.BIO_DATA) {
+          throw new Error('data.js não carregou (window.BIO_DATA ausente)');
+        }
+
+        const categories = Array.isArray(window.BIO_DATA.categories)
           ? window.BIO_DATA.categories
           : [];
+        const localProducts = Array.isArray(window.BIO_DATA.products)
+          ? window.BIO_DATA.products
+          : [];
+        const remoteProducts = await fetchProducts(REMOTE_PRODUCTS_URL);
 
-        const [localProducts, remoteProducts] = await Promise.all([
-          fetchProducts(LOCAL_PRODUCTS_URL),
-          fetchProducts(REMOTE_PRODUCTS_URL)
-        ]);
-
-        // Remoto (atual) primeiro; data.json completa o restante
+        // Remoto (atual) primeiro; data.js completa o restante
         const products = mergeProducts(remoteProducts, localProducts);
 
         renderProducts(products, categories);
