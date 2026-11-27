@@ -517,10 +517,15 @@
     </footer>
   </main>
 
+  <!-- data.js resolve a partir da página (não do <base>), funciona em file:// sem servidor -->
   <script>
-    // Troque por uma URL externa absoluta quando quiser (ex.: CDN ou API).
-    // Caminhos relativos resolvem a partir da página atual (não do <base>).
-    const DATA_URL = new URL('data.json', window.location.href).href;
+    document.write(
+      '<script src="' + new URL('data.js', window.location.href).href + '"><\/script>'
+    );
+  </script>
+  <script>
+    // Opcional: URL externa de JSON (CDN/API). Vazio = usa data.js local (offline).
+    const DATA_URL = '';
 
     const productList = document.getElementById('productList');
     const scrollIndicator = document.getElementById('scrollIndicator');
@@ -645,13 +650,20 @@
       productList.innerHTML = '<p class="empty-state">Carregando ofertas...</p>';
 
       try {
-        const response = await fetch(DATA_URL, { cache: 'no-store' });
+        let data = window.BIO_DATA;
 
-        if (!response.ok) {
-          throw new Error(`Falha ao carregar dados (${response.status})`);
+        if (DATA_URL) {
+          const response = await fetch(DATA_URL, { cache: 'no-store' });
+          if (!response.ok) {
+            throw new Error(`Falha ao carregar dados (${response.status})`);
+          }
+          data = await response.json();
         }
 
-        const data = await response.json();
+        if (!data || typeof data !== 'object') {
+          throw new Error('Dados de ofertas não encontrados');
+        }
+
         const categories = Array.isArray(data.categories) ? data.categories : [];
         const products = Array.isArray(data.products) ? data.products : [];
 

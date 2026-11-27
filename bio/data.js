@@ -1,0 +1,172 @@
+window.BIO_DATA = {
+  "categories": [
+    {
+      "id": "bf",
+      "name": "BLACK FRIDAY 2026"
+    },
+    {
+      "id": "p2611",
+      "name": "Ofertas de 26/11"
+    },
+    {
+      "id": "p1911",
+      "name": "Ofertas de 19/11"
+    },
+    {
+      "id": "gtavi",
+      "name": "Especial Lançamento GTA VI"
+    }
+  ],
+  "products": [
+    {
+      "title": "Interruptor Sensor de Presença para Iluminação ESPI 360 A Branco Intelbras",
+      "image": "https://m.media-amazon.com/images/I/31AmcrnuN0L.jpg",
+      "url": "https://link.amazon/B07kEU2Vq",
+      "category_id": "bf"
+    },
+    {
+      "title": "UGREEN 2 Em 1 HDMI Para USB Placa De Captura De Vídeo E Áudio 4K 30Hz Loop-out 2K 30Hz Gravação Transmissão Ao Vivo Wind",
+      "image": "https://down-br.img.susercontent.com/file/cn-11134207-820l4-mesgqenupczq1c",
+      "url": "https://s.shopee.com.br/8png29F34m",
+      "category_id": "bf"
+    },
+    {
+      "title": "Hoverboard Skate Elétrico 6.5 Polegadas Com Led E Bluetooth",
+      "image": "https://http2.mlstatic.com/D_Q_NP_2X_794796-MLA119397643089_102026-AB.webp",
+      "url": "https://meli.la/1WN5pT2",
+      "category_id": "bf"
+    },
+    {
+      "title": "Gin London Dry 750ml Beefeater Sabor Refrescante E Equilibrado, Com Um Toque Frutado E Levemente Cítrico",
+      "url": "https://meli.la/1giknz7",
+      "image": "https://http2.mlstatic.com/D_Q_NP_2X_871819-MLA113775988658_072026-AB.webp",
+      "category_id": "p2611"
+    },
+    {
+      "title": "Pistola de água de dupla ação Brincadeiras com brinquedos em alta - Presente de Natal",
+      "url": "https://s.shopee.com.br/2BGkWkIIFW",
+      "image": "https://down-br.img.susercontent.com/file/sg-11134201-821f1-mgwv24dyamtp98",
+      "category_id": "p2611"
+    },
+    {
+      "title": "Refil de Saquinhos Higiênicos para Cães Germanhart Verde 8 Rolos",
+      "url": "https://link.amazon/B03VRuriJ",
+      "image": "https://m.media-amazon.com/images/I/712ZaCTRGmL.jpg",
+      "category_id": "p2611"
+    },
+    {
+      "title": "Escova de Dente Elétrica Oral-B PRO 1+ Vitality, 1 unidade, 3 Refis",
+      "url": "https://meli.la/1eMjjna",
+      "image": "https://http2.mlstatic.com/D_Q_NP_2X_977288-MLA120808487735_112026-AB.webp",
+      "category_id": "p2611"
+    },
+    {
+      "title": "Suporte para Fone De Ouvido Economia Espaço Gaming Headset Rack Desktop Organizador Gamer(Não acomapnha Fone)",
+      "url": "https://s.shopee.com.br/2LaAj3HeuX",
+      "image": "https://down-br.img.susercontent.com/file/br-11134207-820lu-mnt3fjzz0wle90",
+      "category_id": "p2611"
+    },
+    {
+      "title": "Capas de Joystick Thumb Grips Trust GXT 266 Preto e Branco",
+      "url": "https://link.amazon/B0iWu5fA4",
+      "image": "https://m.media-amazon.com/images/I/71m-izZ1JkL.jpg",
+      "category_id": "p2611"
+    },
+    {
+      "title": "Desinfetante 5L Lysoform Líquido Original Desinfetante Casa para Limpeza Pesada",
+      "url": "https://meli.la/1HaTS9r",
+      "image": "https://http2.mlstatic.com/D_Q_NP_2X_872210-MLA111407952686_052026-AB.webp",
+      "category_id": "p2611"
+    },
+    {
+      "title": "Nova Fivela Magnética Lenço Quadrado Primavera Outono Inverno Moda High-end Pescoço Mais Quente Cachecol",
+      "url": "https://s.shopee.com.br/6q2a5Jizrl",
+      "image": "https://down-br.img.susercontent.com/file/sg-11134201-820me-mo120zv162o817",
+      "category_id": "p2611"
+    },
+    {
+      "title": "Telefone Sem Fio Digital TS 3110 Branco e Vermelho Intelbras",
+      "url": "https://link.amazon/B00faKL75",
+      "image": "https://m.media-amazon.com/images/I/41k0IyjphCL.jpg",
+      "category_id": "p2611"
+    },
+    {
+      "title": "GoPro HERO12 Black - Câmera de ação 5.3k60, 27MP, à Prova d'água 10m, Preto",
+      "url": "https://meli.la/17Dupwt",
+      "image": "https://http2.mlstatic.com/D_Q_NP_2X_877933-MLA99458176482_112025-AB.webp",
+      "category_id": "p2611"
+    },
+    {
+      "title": "Fita Dupla Face Super Forte Lavável Gel Auto Colante",
+      "url": "https://s.shopee.com.br/60TT5m8ZWD",
+      "image": "https://down-br.img.susercontent.com/file/sg-11134201-7rdy4-mccgi0y8dlzt39",
+      "category_id": "p2611"
+    },
+    {
+      "title": "10 Botões Broches de Pressão para Decote com Strass e Pérolas",
+      "url": "https://link.amazon/B05ePn36W",
+      "image": "https://m.media-amazon.com/images/I/61o+y-wcd3L.jpg",
+      "category_id": "p2611"
+    },
+    {
+      "title": "Wap Empr 900k Martelete Sds Plus Com Seletor Reverso 900 W 127V",
+      "image": "https://http2.mlstatic.com/D_Q_NP_2X_664778-MLA120360621897_102026-AB.webp",
+      "url": "https://meli.la/1xBhRtu",
+      "category_id": "p1911"
+    },
+    {
+      "title": "Neurodyn Portátil System 5 Correntes Russa Tens Fes Aussie 127/220v",
+      "image": "https://http2.mlstatic.com/D_Q_NP_2X_635205-MLB120434579189_102026-AB--neurodyn-portatil-system-5-correntes-russa-tens-fes-aussie.webp",
+      "url": "https://meli.la/1HnLVMg",
+      "category_id": "p1911"
+    },
+    {
+      "title": "Cacheador Philco Bivolt 32mm Íon Tourmaline Advance PEC11",
+      "image": "https://down-br.img.susercontent.com/file/sg-11134201-825a1-mvmc7pxzooaq04",
+      "url": "https://s.shopee.com.br/906tUVmDYY",
+      "category_id": "p1911"
+    },
+    {
+      "title": "Bico Para Pneus",
+      "image": "https://down-br.img.susercontent.com/file/br-11134207-820m4-muvf28zk70ub17",
+      "url": "https://s.shopee.com.br/9AQJgolaDb",
+      "category_id": "p1911"
+    },
+    {
+      "title": "Baqueta Para Bateria 7A Nirvana Eco Bio Liverpool",
+      "image": "https://m.media-amazon.com/images/I/613OqWAfW3L.jpg",
+      "url": "https://link.amazon/B0aziAemu",
+      "category_id": "p1911"
+    },
+    {
+      "title": "Vela Espiral Colorida Aniversário 4 Unidades Decoração Festas Bolo",
+      "image": "https://m.media-amazon.com/images/I/519lLRpGFjL.jpg",
+      "url": "https://link.amazon/B04gBFRjW",
+      "category_id": "p1911"
+    },
+    {
+      "title": "Smart TV LG 55\" LED 4K UHD Smart Pro 55AU801C0SA",
+      "image": "https://m.media-amazon.com/images/I/61qaalsmAOL.jpg",
+      "url": "https://link.amazon/B0b0xIN7u",
+      "category_id": "gtavi"
+    },
+    {
+      "title": "Sony PlayStation 5 Slim Edição Digital 825GB",
+      "image": "https://m.media-amazon.com/images/I/51xclChPXvL.jpg",
+      "url": "https://link.amazon/B0f2m9AQc",
+      "category_id": "gtavi"
+    },
+    {
+      "title": "Grand Theft Auto VI - PlayStation 5 (mídia física)",
+      "image": "https://http2.mlstatic.com/D_NQ_NP_639067-MLA114816196520_082026-O.webp",
+      "url": "https://link.amazon/B0a69SEuM",
+      "category_id": "gtavi"
+    },
+    {
+      "title": "Controle sem fio Sony DualSense PS5 Midnight Black",
+      "image": "https://m.media-amazon.com/images/I/517nIWAoJFL.jpg",
+      "url": "https://link.amazon/B02DsJM4p",
+      "category_id": "gtavi"
+    }
+  ]
+};
